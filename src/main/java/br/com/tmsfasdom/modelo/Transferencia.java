@@ -22,94 +22,35 @@ public class Transferencia extends Lancamento {
 	String numero_inscricao_favorecido;
 	String id_deposito_judicial;
 
-	public Transferencia(String header_lote, String linha_A) {
-
-		setNumero_agencia(header_lote.substring(53, 57));
-		setDv_agencia(header_lote.substring(58, 59));
-		setNumero_conta(header_lote.substring(59, 70));
-		setDv_conta(header_lote.substring(71, 72));
-		setCnpj(header_lote.substring(19, 32));
-		setConvenio(header_lote.substring(33, 52));
-		setTipo_servico(header_lote.substring(10, 11));
-		setForma_lancamento(header_lote.substring(12, 13));
-		setCodigo_ocorrencia(linha_A.substring(231, 240));
-		setNumero_documento(linha_A.substring(74, 93));
-		setData_pagamento(linha_A.substring(94, 101));
-		setValor_pagamento(linha_A.substring(120, 134));
-		setCodigo_camara_centralizadora(linha_A.substring(18, 20));
-		setCodigo_banco_favorecido(linha_A.substring(21, 23));
-		setAgencia_conta_favorecido(linha_A.substring(24, 28));
-		setDv_agencia_conta_favorecido(linha_A.substring(29));
-		setConta_favorecido(linha_A.substring(30, 41));
-		setDv_conta_favorecido(linha_A.substring(42, 43));
-		setNome_favorecido(linha_A.substring(44, 73));
-		setData_real_pagamento(linha_A.substring(155, 162));
-		setValor_real_pagamento(linha_A.substring(163, 177));
-		setId_deposito_judicial(linha_A.substring(178, 217));
-	}
-
-	public Transferencia(String header_lote, String linha_A, String linha_B_ou_Z) {
-
-		setNumero_agencia(header_lote.substring(53, 57));
-		setDv_agencia(header_lote.substring(58, 59));
-		setNumero_conta(header_lote.substring(59, 70));
-		setDv_conta(header_lote.substring(71, 72));
-		setCnpj(header_lote.substring(19, 32));
-		setConvenio(header_lote.substring(33, 52));
-		setTipo_servico(header_lote.substring(10, 11));
-		setForma_lancamento(header_lote.substring(12, 13));
-		setCodigo_ocorrencia(linha_A.substring(231, 240));
-		setNumero_documento(linha_A.substring(74, 93));
-		setData_pagamento(linha_A.substring(94, 101));
-		setValor_pagamento(linha_A.substring(120, 134));
-		setCodigo_camara_centralizadora(linha_A.substring(18, 20));
-		setCodigo_banco_favorecido(linha_A.substring(21, 23));
-		setAgencia_conta_favorecido(linha_A.substring(24, 28));
-		setDv_agencia_conta_favorecido(linha_A.substring(29));
-		setConta_favorecido(linha_A.substring(30, 41));
-		setDv_conta_favorecido(linha_A.substring(42, 43));
-		setNome_favorecido(linha_A.substring(44, 73));
-		setData_real_pagamento(linha_A.substring(155, 162));
-		setValor_real_pagamento(linha_A.substring(163, 177));
-		setId_deposito_judicial(linha_A.substring(178, 217));
-
-		if (linha_B_ou_Z.substring(14, 15).contentEquals("B")) {
-			setTipo_inscricao_favorecido(linha_B_ou_Z.substring(18, 19));
-			setNumero_inscricao_favorecido(linha_B_ou_Z.substring(19, 32));
-		}
-
-		if (linha_B_ou_Z.substring(14, 15).contentEquals("Z")) {
-			setAutenticacao(linha_B_ou_Z.substring(79, 103));
-		}
-
-	}
-
+	
 	public Transferencia(String header_lote, String linha_A, String linha_B, String linha_Z) {
-		setNumero_agencia(header_lote.substring(53, 57));
-		setDv_agencia(header_lote.substring(58, 59));
-		setNumero_conta(header_lote.substring(59, 70));
-		setDv_conta(header_lote.substring(71, 72));
-		setCnpj(header_lote.substring(19, 32));
-		setConvenio(header_lote.substring(33, 52));
-		setTipo_servico(header_lote.substring(10, 11));
-		setForma_lancamento(header_lote.substring(12, 13));
-		setCodigo_ocorrencia(linha_A.substring(231, 240));
-		setNumero_documento(linha_A.substring(74, 93));
-		setData_pagamento(linha_A.substring(94, 101));
-		setValor_pagamento(linha_A.substring(120, 134));
-		setCodigo_camara_centralizadora(linha_A.substring(18, 20));
-		setCodigo_banco_favorecido(linha_A.substring(21, 23));
-		setAgencia_conta_favorecido(linha_A.substring(24, 28));
-		setDv_agencia_conta_favorecido(linha_A.substring(29));
-		setConta_favorecido(linha_A.substring(30, 41));
-		setDv_conta_favorecido(linha_A.substring(42, 43));
-		setNome_favorecido(linha_A.substring(44, 73));
-		setData_real_pagamento(linha_A.substring(155, 162));
-		setValor_real_pagamento(linha_A.substring(163, 177));
-		setId_deposito_judicial(linha_A.substring(178, 217));
-		setTipo_inscricao_favorecido(linha_B.substring(18, 19));
-		setNumero_inscricao_favorecido(linha_B.substring(19, 32));
-		setAutenticacao(linha_Z.substring(79, 103));
+
+		setNumero_agencia(header_lote.substring(52, 57));
+		setDv_agencia(header_lote.substring(57, 58));
+		setNumero_conta(header_lote.substring(58, 70));
+		setDv_conta(header_lote.substring(70, 71));
+		setCnpj(header_lote.substring(18, 32));
+		setConvenio(header_lote.substring(32, 52));
+		setTipo_servico(header_lote.substring(9, 10));
+		setForma_lancamento(header_lote.substring(11, 12));
+		setCodigo_ocorrencia(linha_A.substring(230, 240));
+		setNumero_documento(linha_A.substring(73, 93));
+		setData_pagamento(linha_A.substring(93, 101));
+		setValor_pagamento(linha_A.substring(119, 134));
+		setCodigo_camara_centralizadora(linha_A.substring(17, 20));
+		setCodigo_banco_favorecido(linha_A.substring(20, 23));
+		setAgencia_conta_favorecido(linha_A.substring(23, 28));
+		setDv_agencia_conta_favorecido(linha_A.substring(28,29));
+		setConta_favorecido(linha_A.substring(29, 41));
+		setDv_conta_favorecido(linha_A.substring(41, 43));
+		setNome_favorecido(linha_A.substring(43, 73));
+		setData_real_pagamento(linha_A.substring(154, 162));
+		setValor_real_pagamento(linha_A.substring(162, 177));
+		setId_deposito_judicial(linha_A.substring(177, 217));
+		setTipo_inscricao_favorecido(linha_B.substring(17, 18));
+		setNumero_inscricao_favorecido(linha_B.substring(18, 32));
+		setAutenticacao(linha_Z.substring(78, 103));
+		setNumero_documento_banco(linha_A.substring(134, 154));
 		
 	}
 

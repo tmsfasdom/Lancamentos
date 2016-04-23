@@ -26,7 +26,8 @@ public class JPAConfig {
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		//dataSource.setUrl("jdbc:mysql://dedicatoriesdb.cwrmo14g4xfu.us-west-2.rds.amazonaws.com:3306/dedicatories");
-		dataSource.setUrl("jdbc:mysql://192.168.171.5:3306/lancamentos");
+		//dataSource.setUrl("jdbc:mysql://192.168.171.5:3306/lancamentos");
+		dataSource.setUrl("jdbc:mysql://tmsfasdom.com.br:3306/lancamentos");
 		dataSource.setUsername("fernando");
 		dataSource.setPassword("fer14911");
 

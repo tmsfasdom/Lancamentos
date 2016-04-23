@@ -2,8 +2,6 @@ package br.com.tmsfasdom.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -14,8 +12,7 @@ public abstract class Lancamento {
 
 	@Id
 	@Column
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	int id;
+	String numero_documento_banco;
 	String numero_agencia;
 	String dv_agencia;
 	String numero_conta;
@@ -30,12 +27,13 @@ public abstract class Lancamento {
 	String data_pagamento;
 	String valor_pagamento;
 
-	public int getId() {
-		return id;
+		
+	public String getNumero_documento_banco() {
+		return numero_documento_banco;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setNumero_documento_banco(String numero_documento_banco) {
+		this.numero_documento_banco = numero_documento_banco;
 	}
 
 	public String getNumero_agencia() {
